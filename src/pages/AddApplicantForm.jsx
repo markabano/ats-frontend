@@ -95,7 +95,7 @@ function AddApplicantForm({ onClose, initialData, onEditSuccess }) {
   useEffect(() => {
     const fetchPositions = async () => {
       try {
-        const response = await api.get("/company/positions/all")
+        const response = await api.get("/company/positions")
         setPositions(response.data.positions)
       } catch (error) {
         console.error("Error fetching positions:", error)
